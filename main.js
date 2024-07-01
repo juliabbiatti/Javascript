@@ -206,7 +206,7 @@ if (edad > 1000) {
 
 //While
 
-let i = 0;
+/*let i = 0;
 while (i < 5) {
   console.log("Valor de i: ", i);
   i = i + 1;
@@ -261,10 +261,9 @@ document.write("Solamente te queda un paso para caminar");
       const nombres = ["Harry", "Hermione", "Ron"];
       const nombreEncontrado = nombres.find(elemento => elemento === "Harry");
       console.log("El nombre encontrado es: ", nombreEncontrado);
- */ 
+ */
 
-
-     /* const numeros = [1, 2, 3, 4, 5, 6, 10];
+/* const numeros = [1, 2, 3, 4, 5, 6, 10];
       const numMayoresCinco = numeros.filter((n) =>
       n >= 5 );
       console.log(numMayoresCinco);
@@ -284,6 +283,64 @@ document.write("Solamente te queda un paso para caminar");
 
     */
 
-    /*CLASE 16*/
+//CLASE 16-FUNCIONES
 
-    
+/*function holacomoestas(){
+      prompt('Holaaa')
+    }
+
+    holacomoestas()
+
+function saludar(nombre, apellido , edad) {
+  document.write("Hola ", nombre, " ", apellido, " tu edad es ", edad);
+}
+
+saludar("juli", "abbiatti", 23);
+
+//clase 16 
+
+console.log(document.body) //Nos imprime el objeto
+console.dir(document.body) //Nos imprime las propiedades
+*/
+
+//Selección de elementos del DOM querySelector
+
+let titulo = document.querySelector('#titulo');
+let parrafos = document.querySelectorAll('.parrafo');
+let cambiarTextoBtn = document.querySelector('#cambiarTexto');
+let cambiarColorBtn = document.querySelector('#cambiarColor');
+let cambiarClaseBtn = document.querySelector('#cambiarClase');
+
+
+console.log(titulo);
+console.log(parrafos);
+console.log(cambiarTextoBtn);
+
+
+// Función para cambiar texto del título 
+function cambiarTexto(){
+  titulo.textContent = 'Texto nuevo';
+}
+
+//Función para cambiar el color de todos los parrafos seleccionados 
+
+function cambiarColor() {
+  parrafos.forEach(parrafo => {
+      parrafo.classList.toggle('cambiarColor');
+  });
+}
+
+function cambiarClase() {
+  parrafos.forEach(parrafo => {
+    parrafo.classList.toggle('nuevaClase');
+});
+}
+
+
+
+//Asignar Evento CLICK a los botones
+cambiarTextoBtn.addEventListener('click', cambiarTexto);
+cambiarColorBtn.addEventListener('click', cambiarColor);
+cambiarClaseBtn.addEventListener('click', cambiarClase);
+
+//Clase 17
